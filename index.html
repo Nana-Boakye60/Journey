@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trial with Collapsible Sidebar</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .content {
+      padding: 20px;
+      margin-left: 0; /* no fixed sidebar, offcanvas handles it */
+    }
+
+    .pic img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .button {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Toggle button for sidebar -->
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+        ☰ Menu
+      </button>
+      <span class="navbar-brand mb-0 h1">Afua Futagbli</span>
+    </div>
+  </nav>
+
+  <!-- Collapsible Sidebar -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="sidebarLabel">Navigation</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <nav class="nav flex-column">
+        <a class="nav-link" href="./chapter1.html"> Arrival</a>
+        <a class="nav-link" href="./chapter2.html"> Friendship</a>
+        <a class="nav-link" href="./chapter3.html"> Talent Show</a>
+        <a class="nav-link" href="./chapter4.html"> Twist of Fate</a>
+        <a class="nav-link" href="./chapter5.html"> Resolution</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="content">
+    <div class="pic">
+      <img src="web-cover-page.png" alt="Book cover page"/>
+    </div> 
+
+    <div id="ptext">
+      <p>
+        If she's amazing, she won't be easy. If she's easy, she won't be amazing. 
+        If she's worth it, you won’t give up. If you give up, you're not worthy. 
+        Truth is, everybody is going to hurt you; you just gotta find the ones worth suffering for.
+      </p>
+    </div>
+
+    <div class="button">
+      <a href="https://www.youtube.com" class="btn btn-secondary">Watch Story</a>
+      <a href="./Story.html" class="btn btn-success">Read The Story</a>
+    </div> 
+
+    <footer class="border-top py-5 my-5 text-center">
+      <p class="text-body-secondary">© 2025 Afua Futagbli</p>
+    </footer>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

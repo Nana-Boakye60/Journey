@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gillies & Danielle Story</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #fdfdfd;
+      padding: 20px;
+      scroll-behavior: smooth; /* ✨ enables smooth scrolling */
+    }
+
+    /* Rounded container for the story */
+    .story-container {
+      background: #fff;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+
+    /* Chapter headings */
+    .chapter-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    /* Thick separator line between chapters */
+    .chapter-separator {
+      border-top: 5px solid #333;
+      margin: 40px 0;
+    }
+
+    /* Floating Back to Top button */
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none; /* hidden until user scrolls */
+      z-index: 1000;
+      background-color: #87CEFA; /* light blue */
+      color: #fff;
+      border: none;
+      border-radius: 50%; /* circular shape */
+      width: 55px;
+      height: 55px;
+      font-size: 22px;
+      text-align: center;
+      line-height: 55px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      opacity: 0;
+    }
+
+    /* Hover effect */
+    #backToTop:hover {
+      background-color: #5aa9e6; /* darker blue on hover */
+    }
+
+    /* Fade-in + bounce animation */
+    #backToTop.show {
+      display: block;
+      opacity: 1;
+      transform: scale(1.1);
+      animation: bounceIn 0.4s ease;
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      60% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1.0); }
+    }
+  </style>
+</head>
+<body id="top">
+  <!-- Top Navbar with Sidebar Toggle -->
+  
+
+  <div class="story-container">
+    <div id="chapter1">
+      <div class="chapter-title">Chapter 1: The Arrival</div>
+      <p>In a beautiful, quiet, and intricate city nestled in the heart of Accra lived Gillies Davidson, a young, passionate, and energetic boy full of curiosity. He schooled near the city at University Basic School, where his days were filled with laughter, mischief, and endless questions about the world.
+
+One day, a new student joined his class. Danielle — light‑skinned, short black hair, dimples that appeared whenever she smiled. Her oval face and pale pink lips framed eyes that seemed to hold secrets. Gillies was captivated instantly. That day, he couldn’t concentrate; his mind was consumed by her presence.</p>
+    </div>
+
+    <button id="backToTop">↑</button>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Show/Hide Back to Top Button -->
+  <script>
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTop.classList.add("show");
+      } else {
+        backToTop.classList.remove("show");
+      }
+    });
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
+
+  
